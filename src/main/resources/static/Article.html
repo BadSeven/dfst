@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<!-- <title>东方神泰健康</title> -->
+<TITLE>东方神泰健康 官方网站首页</TITLE>
+<META content="雨水回收利用" name=keywords>
+<META content="雨水回收利用就找东方神泰健康,承包各种雨水回收利用系统,一流的施工队伍,先进技术团队, 价格合理,服务周到,产品优质高效节能环保,安装简便!" name=description>
+<link href="css/index.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/imein.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="js/article.js"></script>
+
+
+</head>
+<body>
+<div id="head">
+  <div class="head_center">
+  <div id="headmenu">
+  	<a href="/">首页</a>
+  	<a href="Contact.html">联系我们</a>
+  	<a href="javascript:void(0);" onclick="AddFavorite(window.location,document.title);">加入收藏</a>
+  </div>
+  </div>
+</div>
+<script type="text/javascript">
+$("#sites,#headmenuSon").hover(function(){
+  $("#sites").css("color","#FFF");
+  $("#headmenuSon").stop().slideDown(350);
+},function(){
+  $("#sites").css("color","#A8CBE3");
+  $("#headmenuSon").stop().slideUp(250);
+});
+</script>
+<div id="top">
+  <div id="logo">
+  	<a href="#">
+  		<img src="images/mydf-2.png" >
+  	</a>
+  </div>
+ <ul id="menu">
+    <li>
+      <a href="/" class="">首页</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="about.html" class="">品牌介绍</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="Article.html" class="">新闻动态</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li bg="none">
+    	<a href="Anli.html" class="" style="background: none;">产品中心</a>   
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="gaiK.html" class="">企业文化</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="Contact.html" class="">联系我们</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="Job.html" class="">加入我们</a>
+    </li>   
+  </ul>
+  <div id="search">
+  <form id="formsearch" name="formsearch" method="POST" action="#">    
+    <div style="width:36px; height:28px; float:right;">
+    <img src="picture/search_btn.png" style="cursor:pointer;" onClick="javascript:check_and_submit(document.formsearch);"></div>
+    <div style="background:#EEE; height:28px; line-height:26px; width:150px; float:right; border-radius:4px 0px 0px 4px;">
+    <input type="text" name="keys" id="keys" value="关键词…" style="background:none; border:0px none; padding:0px 5px; margin-left:2px; margin-top:1px; color:#888; width:130px; outline:none;">
+    </div>
+  <input type="hidden" name="think_html_token" value=""/></form>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<script type="text/javascript">
+  var tag="";
+   function check_and_submit(obj)
+   {
+      var ele = obj.elements;
+      tag = obj;
+      tag.submit(); 
+      // setTimeout("do_login_submit()",0);
+
+   }
+
+$("#keys").focus(function(){
+  $(this).css("color","#FFF");
+  if($(this).val()=='关键词…'){
+    $(this).val('');
+  }
+  $(this).parent().stop().animate({"backgroundColor":"#0067AC","width":"180px"},350);
+  $(this).stop().animate({"width":"160px"},350);
+});
+$("#keys").blur(function(){
+  $(this).css("color","#888");
+  if($(this).val()==''){
+    $(this).val('关键词…');
+  }
+  $(this).parent().stop().animate({"backgroundColor":"#EEEEEE","width":"150px"},300);
+  $(this).stop().animate({"width":"130px"},300);
+});
+$("#menu li").hover(function(){
+  if($(this).attr("bg")=="none"){
+    $(this).find("a").css("background","none");
+  }
+  $(this).find("a").eq(0).addClass("A");
+  $(this).find("div").stop().slideDown(350);
+},function(){
+  if($(this).attr("bg")=="none"){
+    $(this).find("a").css("background","none");
+  }
+  $(this).find("a").eq(0).removeClass("A");
+  $(this).find("div").stop().slideUp(200);
+});
+</script>
+
+<div id="banner">
+  <div id="bannerCon">
+    <img src="picture/banner_text.png" id="bannerText">
+    <p id="bannerTit"><a href="/index.php" class="aGray">首页</a> - <a href="/index.php/Article" class="aGray">企业新闻</a> <!-- - <a href="#" class="aGray">企业新闻</a> --><span>新闻动态</span></p>
+  </div>
+</div>
+<div id="menuSon">
+	<ul id="menuSonList">   
+    <li><a href="#">新闻动态</a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+$("#menuSonList li").hover(function(){
+  $(this).stop().animate({'backgroundColor':'#CC0000'},450);
+},function(){
+  if($(this).attr("class")!="A"){
+    $(this).stop().animate({'backgroundColor':'#0066AC'},350);
+  }
+});
+</script>
+<div id="main">
+  <ul class="newslist" style="margin-top:20px;" id="newList">
+
+  </ul>
+    <div class="pageshow">
+ <!--  <div class="pageleft"> </div> -->
+  <div class="pageright">  共8 条记录/1页         </div>
+  <div style="clear:both; height:1px; font-size:1px;">
+  	
+  </div>
+  </div>
+  <p style="clear:both; height:30px;"></p>
+</div>
+<script type="text/javascript">
+$(".newslist a").hover(function(){
+  $(this).find(".tim").stop().animate({'backgroundColor':'#F80'},450);
+  $(this).find(".tim p").stop().animate({'color':'#FFF'},450);
+  $(this).find(".con p").eq(0).stop().animate({'color':'#F80'},450);
+},function(){
+  $(this).find(".tim").stop().animate({'backgroundColor':'#EEE'},350);
+  $(this).find(".tim p").stop().animate({'color':'#888'},350);
+  $(this).find(".con p").eq(0).stop().animate({'color':'#0066CC'},350);
+});
+</script>
+<div id="footer">
+ <div class="footer">
+    <div class="footer_nav">
+
+    
+    <div class="footer_bottom">
+      <p style=" padding-top:10px;"> 版权所有： 东方神泰健康  Copyright  &copy; 2017-2025 &nbsp;&nbsp;&nbsp;  电话：028-87560962 &nbsp;&nbsp;&nbsp; 传真：028-87560962</p>
+
+      <p style="padding-top:10px;"> 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：四川省成都市金牛区蜀西环街69号 &nbsp;&nbsp; 邮箱：5587493@qq.com&nbsp;&nbsp; </p>
+
+    </div>
+
+    <!-- <a style='padding-right:20px;color:#cbcbcb; cursor:pointer;'>网址：http://www.sctofun.com</a> -->
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+// JavaScript Document
+// 加入收藏 <a onclick="AddFavorite(window.location,document.title)">加入收藏</a>
+ 
+function AddFavorite(sURL, sTitle)
+{
+  try
+  {
+    window.external.addFavorite(sURL, sTitle);
+  }
+  catch (e)
+  {
+    try
+    {
+      window.sidebar.addPanel(sTitle, sURL, "");
+    }
+    catch (e)
+    {
+      alert("加入收藏失败，请使用Ctrl+D进行添加");
+    }
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<!-- <title>东方神泰健康</title> -->
+<TITLE>东方神泰健康 官方网站首页</TITLE>
+<META content="雨水回收利用" name=keywords>
+<META content="雨水回收利用就找东方神泰健康,承包各种雨水回收利用系统,一流的施工队伍,先进技术团队, 价格合理,服务周到,产品优质高效节能环保,安装简便!" name=description>
+<link href="css/index.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/imein.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<style type="text/css">
+	.tijiao{
+		width: 100%;
+		overflow: hidden;
+	}
+	.tijiao form{
+		width: 624px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.tijiao .input_div{
+		width: 100%;
+		overflow: hidden;
+	}
+	.tijiao .input_div p{
+		width: 297px;
+		overflow: hidden;
+		float: left;
+		margin-top: 15px;
+	}
+	.tijiao label{
+		width: 100%;
+		overflow: hidden;
+	}
+	.tijiao label span{
+		display: block;
+		font-size: 14px;
+		color: #666666;
+	}
+	.tijiao label textarea{
+		padding: 0;
+		width: 622px;
+		height: 54px;
+    margin-top: 6px;
+		display: block;
+		resize: none;
+		text-indent: 1em;
+		border: 0;
+		border: 1px solid #CCCCCC;
+	}
+	.tijiao label input[type=text]{
+		width: 295px;
+		border: 0;
+		height: 37px;
+		display: block;
+		text-indent: 1em;
+		margin-top: 6px;
+		border: 1px solid #CCCCCC;
+	}
+	.btn-jiamen{
+		width: 120px;
+		height: 35px;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		line-height: 35px;
+		background: #3C763D;
+		color: #FFFFFF;
+		border: 0;
+		margin-top: 15px;
+	}
+</style>
+
+</head>
+<body>
+<div id="head">
+  <div class="head_center">
+  <div id="headmenu">
+  	<a href="index.html">首页</a>
+  	<a href="Contact.html">联系我们</a>
+  	<a href="javascript:void(0);" onclick="AddFavorite(window.location,document.title);">加入收藏</a>
+  </div>
+  </div>
+</div>
+<script type="text/javascript">
+$("#sites,#headmenuSon").hover(function(){
+  $("#sites").css("color","#FFF");
+  $("#headmenuSon").stop().slideDown(350);
+},function(){
+  $("#sites").css("color","#A8CBE3");
+  $("#headmenuSon").stop().slideUp(250);
+});
+</script>
+<div id="top">
+  <div id="logo">
+  	<a href="#">
+  		<img src="images/mydf-2.png" >
+  	</a>
+  </div>
+ <ul id="menu">
+    <li>
+      <a href="index.html" class="">首页</a>         
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="about.html" class="">品牌介绍</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="Article.html" class="">新闻动态</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li bg="none">
+    	<a href="Anli.html" class="" style="background: none;">产品中心</a>   
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="gaiK.html" class="">企业文化</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="Contact.html" class="">联系我们</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="Job.html" class="">加入我们</a>
+    </li>   
+  </ul>
+  <div id="search">
+  <form id="formsearch" name="formsearch" method="POST" action="/index.php/Index/search">    
+    <div style="width:36px; height:28px; float:right;">
+    <img src="picture/search_btn.png" style="cursor:pointer;" onClick="javascript:check_and_submit(document.formsearch);"></div>
+    <div style="background:#EEE; height:28px; line-height:26px; width:150px; float:right; border-radius:4px 0px 0px 4px;">
+    <input type="text" name="keys" id="keys" value="关键词…" style="background:none; border:0px none; padding:0px 5px; margin-left:2px; margin-top:1px; color:#888; width:130px; outline:none;">
+    </div>
+  <input type="hidden" name="think_html_token" value=""/></form>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<script type="text/javascript">
+  var tag="";
+   function check_and_submit(obj)
+   {
+      var ele = obj.elements;
+      tag = obj;
+      tag.submit(); 
+      // setTimeout("do_login_submit()",0);
+
+   }
+
+$("#keys").focus(function(){
+  $(this).css("color","#FFF");
+  if($(this).val()=='关键词…'){
+    $(this).val('');
+  }
+  $(this).parent().stop().animate({"backgroundColor":"#0067AC","width":"180px"},350);
+  $(this).stop().animate({"width":"160px"},350);
+});
+$("#keys").blur(function(){
+  $(this).css("color","#888");
+  if($(this).val()==''){
+    $(this).val('关键词…');
+  }
+  $(this).parent().stop().animate({"backgroundColor":"#EEEEEE","width":"150px"},300);
+  $(this).stop().animate({"width":"130px"},300);
+});
+$("#menu li").hover(function(){
+  if($(this).attr("bg")=="none"){
+    $(this).find("a").css("background","none");
+  }
+  $(this).find("a").eq(0).addClass("A");
+  $(this).find("div").stop().slideDown(350);
+},function(){
+  if($(this).attr("bg")=="none"){
+    $(this).find("a").css("background","none");
+  }
+  $(this).find("a").eq(0).removeClass("A");
+  $(this).find("div").stop().slideUp(200);
+});
+</script>
+<div id="banner">
+  <div id="bannerCon">
+    <img src="picture/banner_text.png" id="bannerText" />
+    <p id="bannerTit">
+    	<a href="#" class="aGray">首页</a> - 
+    	<a href="#" class="aGray">加入我们</a> 
+    	<span>加入我们</span>
+    </p>
+  </div>  
+</div>
+<div id="menuSon">
+	<ul id="menuSonList">   
+    <li><a href="#">加入我们</a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+$("#menuSonList li").hover(function(){
+  $(this).stop().animate({'backgroundColor':'#CC0000'},450);
+},function(){
+  if($(this).attr("class")!="A"){
+    $(this).stop().animate({'backgroundColor':'#0066AC'},350);
+  }
+});
+</script>
+<div id="main">
+  <div style="margin-top:20px;"><h1 style="color:#0066CC;">求职招聘</h1></div>
+  <div class="text" style="margin-top:12px;">
+  <p>我们招聘的不仅仅是员工——而是共同创业者；<br />
+    我们需要的不仅仅是您的工作热情——更是您永争“帅才”的心；<br />
+    我们给予的不仅仅是共同利益——还有共同发展！<br />
+  </p>
+  </div>
+  <div style="border-top:1px dotted #CCC;">
+  <ul class="list" style="margin-top:30px;">
+
+  <li>
+      <a href="#">
+        <div class="img"><img src="picture/icon_hr.png" height="100" style="left:30px;" /></div>
+        <div class="con"><p style="font-size:14px; color:#555;">区域销售工程师招聘×8</p><p style="color:#999; margin-top:9px; line-height:180%;">基本信息 岗位职责：
+　　1、负责雨水收集与利用系统的市场开拓和产品销售；
+　　2、开发经销商，拓展新市场，对现有的市场进行追踪维护，执行并完成或超额公司产品年度销售计划；
+　　3、根据公司市场营销战略，提升销售价值，控制成本，扩大产品在所负责区域的销售，积极完成销售量指标，扩大产品市场占有率；
+　　4、根据公司产品、价格及市场策略，独立处置询价、报价、合同条款的协商及合同签订并催讨所欠应收销售款项等事宜；
+　　5、动态把握市场价格，定期向公司提供市场分析及预测报告和个人工作报告。收集用户意见，对公司营销策略、售后服务、等提出参考意见；
+　　6、按照公司规定填写有关销售表格，提交销售分析和总结报告；
+　　7、负责协助公司领导办理其他临时性工作、协调工作。
+
+　　任职要求：
+　　1、给排水、市政工程类建筑专业优先
+　　2、年龄不限；
+　　3、有市政、建材、给排水产品销售工作经验，有雨水收集与利用系统相关工作经验和资源者优先考虑；
+　　4、良好的人际沟通能力和商务谈判技巧，形象气质佳，具有亲和力；
+　　5、品行端正，有良好的职业道德、操守及团队协作精神，能够承受一定的工作压力；
+　　6、工作认真细致、责任心强、工作应变能力强。
+
+　　薪资福利：
+　　1、五险；
+　　2、国家法定节假日；
+　　3、年薪7-35万，项目提成丰厚；
+　　4、良好的福利待遇，明晰的上升通道，众多的培训机会，有战斗力的团队。 ...</p></div>
+      </a>
+    </li>
+    <li class="clear"></li>
+
+      </ul>
+  <div style="margin-top:20px; padding-bottom:10px;">
+
+
+  <div class="pageshow">
+ <!--  <div class="pageleft"> </div> -->
+  <div class="pageright">
+  共1 条记录/1页         </div>
+  <div style="clear:both; height:1px; font-size:1px;"></div>
+  </div>
+
+  </div>
+  </div>
+  <p style="clear:both; height:30px;"></p>
+</div>
+<div id="main">
+  <div style="margin-top:20px;margin-bottom: 15px;">
+  	<h1 style="text-align:center;color:#0066CC;">招商加盟</h1>
+  </div>
+
+  <div style="border-top:1px dotted #CCC;padding-top: 15px;">
+  	<div class="tijiao">
+  		<form action="" method="post">
+  			<div class="input_div">
+  				<p>
+  					<label>
+  						<span>您的名字：</span>
+  						<input type="text" name="" id="" value="" />
+  					</label>
+  				</p>
+  				<p style="float: right;">
+  					<label>
+  						<span>您的电子邮箱：</span>
+  						<input type="text" name="" id="" value="" />
+  					</label>
+  				</p>
+  				<p>
+  					<label>
+  						<span>您的电话：</span>
+  						<input type="text" name="" id="" value="" />
+  					</label>
+  				</p>
+  				<p style="float: right;">
+  					<label>
+  						<span>您感兴趣的项目：</span>
+  						<input type="text" name="" id="" value="" />
+  					</label>
+  				</p>
+  			</div>
+  			
+  			<div class="input_div" style="margin-top: 15px;">
+  				<label>
+  					<span>留言：</span>
+  					<textarea name="" rows="" cols=""></textarea>
+  				</label>
+  			</div>
+  			<input class="btn-jiamen" type="submit" value="立即提交"/>
+  		</form>
+  	</div>
+  <div style="margin-top:20px; padding-bottom:10px;">
+
+
+  </div>
+  </div>
+  <p style="clear:both; height:30px;"></p>
+</div>
+
+<script type="text/javascript">
+$(".list a").hover(function(){
+  $(this).find(".img").stop().animate({'backgroundColor':'#F80'},450);
+  $(this).find(".tim p").stop().animate({'color':'#FFF'},450);
+  $(this).find(".con p").eq(0).stop().animate({'color':'#D90000'},450);
+},function(){
+  $(this).find(".img").stop().animate({'backgroundColor':'#EEE'},350);
+  $(this).find(".tim p").stop().animate({'color':'#888'},350);
+  $(this).find(".con p").eq(0).stop().animate({'color':'#555'},350);
+});
+</script>
+
+<div id="footer">
+ <div class="footer">
+    <div class="footer_nav">
+
+    
+    <div class="footer_bottom">
+      <p style=" padding-top:10px;"> 版权所有： 东方神泰健康  Copyright  &copy; 2017-2025 &nbsp;&nbsp;&nbsp;  电话：028-87560962 &nbsp;&nbsp;&nbsp; 传真：028-87560962</p>
+
+      <p style="padding-top:10px;"> 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：四川省成都市金牛区蜀西环街69号 &nbsp;&nbsp; 邮箱：5587493@qq.com&nbsp;&nbsp; </p>
+
+    </div>
+
+    <!-- <a style='padding-right:20px;color:#cbcbcb; cursor:pointer;'>网址：http://www.sctofun.com</a> -->
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+// JavaScript Document
+// 加入收藏 <a onclick="AddFavorite(window.location,document.title)">加入收藏</a>
+ 
+function AddFavorite(sURL, sTitle)
+{
+  try
+  {
+    window.external.addFavorite(sURL, sTitle);
+  }
+  catch (e)
+  {
+    try
+    {
+      window.sidebar.addPanel(sTitle, sURL, "");
+    }
+    catch (e)
+    {
+      alert("加入收藏失败，请使用Ctrl+D进行添加");
+    }
+  }
+}
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+</body>
+</html>

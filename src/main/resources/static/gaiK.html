@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<!-- <title>东方神泰健康</title> -->
+<TITLE>东方神泰健康 官方网站首页</TITLE>
+<link href="css/index.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/imein.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<style type="text/css">
+	  .text p{text-indent:0; font-size:13px; line-height:30px; margin-bottom:40px;}
+</style>
+
+</head>
+<body>
+<div id="head">
+  <div class="head_center">
+  <div id="headmenu">
+  	<a href="index.html">首页</a>
+  	<a href="Contact.html">联系我们</a>
+	  <a href="javascript:void(0);" onclick="AddFavorite(window.location,document.title);">加入收藏</a>
+  </div>
+  </div>
+</div>
+<script type="text/javascript">
+$("#sites,#headmenuSon").hover(function(){
+  $("#sites").css("color","#FFF");
+  $("#headmenuSon").stop().slideDown(350);
+},function(){
+  $("#sites").css("color","#A8CBE3");
+  $("#headmenuSon").stop().slideUp(250);
+});
+</script>
+<div id="top">
+  <div id="logo">
+  	<a href="index.html">
+  		<img src="images/mydf-2.png" >
+  	</a>
+  </div>
+ <ul id="menu">
+    <li>
+      <a href="index.html" class="">首页</a>         
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="about.html" class="">品牌介绍</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="Article.html" class="">新闻动态</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li bg="none">
+    	<a href="Anli.html" class="" style="background: none;">产品中心</a>   
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="gaiK.html" class="">企业文化</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="Contact.html" class="">联系我们</a>
+    </li>
+    <li class="split"><img src="picture/menu_split.gif"></li>
+    <li>
+      <a href="Job.html" class="">加入我们</a>
+    </li>   
+  </ul>
+<div id="search">
+  <form id="formsearch" name="formsearch" method="POST" action="/index.php/Index/search">    
+    <div style="width:36px; height:28px; float:right;">
+    <img src="picture/search_btn.png" style="cursor:pointer;" onClick="javascript:check_and_submit(document.formsearch);"></div>
+    <div style="background:#EEE; height:28px; line-height:26px; width:150px; float:right; border-radius:4px 0px 0px 4px;">
+    <input type="text" name="keys" id="keys" value="关键词…" style="background:none; border:0px none; padding:0px 5px; margin-left:2px; margin-top:1px; color:#888; width:130px; outline:none;">
+    </div>
+  <input type="hidden" name="think_html_token" value=""/></form>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<script type="text/javascript">
+  var tag="";
+   function check_and_submit(obj)
+   {
+      var ele = obj.elements;
+      tag = obj;
+      tag.submit(); 
+      // setTimeout("do_login_submit()",0);
+
+   }
+
+$("#keys").focus(function(){
+  $(this).css("color","#FFF");
+  if($(this).val()=='关键词…'){
+    $(this).val('');
+  }
+  $(this).parent().stop().animate({"backgroundColor":"#0067AC","width":"180px"},350);
+  $(this).stop().animate({"width":"160px"},350);
+});
+$("#keys").blur(function(){
+  $(this).css("color","#888");
+  if($(this).val()==''){
+    $(this).val('关键词…');
+  }
+  $(this).parent().stop().animate({"backgroundColor":"#EEEEEE","width":"150px"},300);
+  $(this).stop().animate({"width":"130px"},300);
+});
+$("#menu li").hover(function(){
+  if($(this).attr("bg")=="none"){
+    $(this).find("a").css("background","none");
+  }
+  $(this).find("a").eq(0).addClass("A");
+  $(this).find("div").stop().slideDown(350);
+},function(){
+  if($(this).attr("bg")=="none"){
+    $(this).find("a").css("background","none");
+  }
+  $(this).find("a").eq(0).removeClass("A");
+  $(this).find("div").stop().slideUp(200);
+});
+</script>
+
+<div id="banner">
+  <div id="bannerCon">
+    <img src="picture/banner_text.png" id="bannerText" />
+    <p id="bannerTit"><a href="/index.php" class="aGray">首页</a> - <a href="/index.php/Pages/1.html" class="aGray">企业概况</a> <!-- - <a href="#" class="aGray">企业概况</a> --><span>公司简介</span></p>
+  </div>
+</div>
+<div id="menuSon">
+	<ul id="menuSonList">   
+    <li><a href="#">联系我们</a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+$("#menuSonList li").hover(function(){
+  $(this).stop().animate({'backgroundColor':'#CC0000'},450);
+},function(){
+  if($(this).attr("class")!="A"){
+    $(this).stop().animate({'backgroundColor':'#0066AC'},350);
+  }
+});
+</script>
+<div id="main">
+  <div class="text" style="margin-top:20px;">
+
+  
+  <img style="float:left;margin-right:20px;" src="picture/about.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>&nbsp; &nbsp; &nbsp;<span class="16" style="text-indent: 32pt; font-family: 楷体; font-size: 16pt">东方神泰健康是拥有：建筑工程施工总承包贰级、市政公用工程施工总承包贰级、地基基础工程专业承包贰级、钢结构工程专业承包贰级、建筑装修装饰工程专业承包贰级、防水防腐保温工程专业承包贰级、建筑幕墙工程专业承包贰级、城市及道路照明工程专业承包贰级、古建筑工程专业承包贰级、环保工程专业承包贰级、起重设备安装工程专业承包贰级、消防设施工程专业承包贰级、特种工程专业承包为一体的综合性建筑企业</span><span class="16" style="text-indent: 32pt; font-family: 楷体; font-size: 16pt">&nbsp;</span><span class="16" style="text-indent: 32pt; font-family: 楷体; font-size: 16pt">。</span></p>
+<p class="MsoNormal" style="text-indent: 32pt; mso-char-indent-count: 2.0000"><span class="16" style="font-family: 楷体; font-size: 16pt">我们将加强完善自身管理机制，追求与客户长远、稳定、双赢的合作关系，使企业获得各界客户的信赖与支持。不断探索进取，努力提升技术水准、管理水平，同时注重业务拓展，努力建立与客户的良好沟通。</span><span class="16" style="font-family: 楷体; font-size: 16pt; mso-spacerun: 'yes'; mso-bidi-font-family: Verdana"><font face="楷体">企业秉持：</font>&ldquo;珍惜托付，用心服务&rdquo;的建设理念。</span><span class="16" style="font-family: 楷体; font-size: 16pt; mso-spacerun: 'yes'; mso-bidi-font-family: Verdana"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 32pt; mso-char-indent-count: 2.0000"><span class="16" style="font-family: 楷体; font-size: 16pt">我们</span><span class="16" style="font-family: 楷体; font-size: 16pt">坚持主观与客观的最佳结合，使团队和员工充满激情，决心立足于重实际、见实效，把文化理念、企业精神融入到生产建设和质量管理的各个环节，致力于用文化提升领导力、执行力和凝聚力，以文化促进生产力。</span><span class="16" style="font-family: 楷体; font-size: 16pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 32pt; mso-char-indent-count: 2.0000"><span class="16" style="font-family: 楷体; font-size: 16pt; mso-spacerun: 'yes'; mso-bidi-font-family: Verdana"><font face="楷体">以坚定自信、一往无前的勇气，昂首挺进，迈向更加绚丽的未来</font>!</span><span class="16" style="font-family: 楷体; font-size: 16pt; mso-spacerun: 'yes'; mso-bidi-font-family: Verdana"><o:p></o:p></span></p> 
+
+  
+</div>
+</div>
+
+<script type="text/javascript">
+$("#bottom_r").hover(function(){
+  $(this).stop().animate({'backgroundColor':'#D90000'},450);
+},function(){
+  $(this).stop().animate({'backgroundColor':'#F90'},300);
+});
+</script>
+
+<div id="footer">
+ <div class="footer">
+    <div class="footer_nav">
+
+    
+    <div class="footer_bottom">
+      <p style=" padding-top:10px;"> 版权所有： 东方神泰健康  Copyright  &copy; 2017-2025 &nbsp;&nbsp;&nbsp;  电话：028-87560962 &nbsp;&nbsp;&nbsp; 传真：028-87560962</p>
+
+      <p style="padding-top:10px;"> 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：四川省成都市金牛区蜀西环街69号 &nbsp;&nbsp; 邮箱：5587493@qq.com&nbsp;&nbsp; </p>
+
+    </div>
+
+    <!-- <a style='padding-right:20px;color:#cbcbcb; cursor:pointer;'>网址：http://www.sctofun.com</a> -->
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+// JavaScript Document
+// 加入收藏 <a onclick="AddFavorite(window.location,document.title)">加入收藏</a>
+ 
+function AddFavorite(sURL, sTitle)
+{
+  try
+  {
+    window.external.addFavorite(sURL, sTitle);
+  }
+  catch (e)
+  {
+    try
+    {
+      window.sidebar.addPanel(sTitle, sURL, "");
+    }
+    catch (e)
+    {
+      alert("加入收藏失败，请使用Ctrl+D进行添加");
+    }
+  }
+}
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script></body>
+</html>
